@@ -9,5 +9,6 @@
 ## Future features:
 
 - Mobile first
-- Loading states: Disable input field while loading
+- Loading states: Loading spinner, Disable input field while loading
 - aria-label, aria-labelledby
+- Make sure email input is sanitized if in contact with database
