@@ -12,13 +12,6 @@ class CouponController extends Controller
  *
  * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
  */
-public function rules(): array
-{
-    return [
-        'title' => 'required|unique:posts|max:255',
-        'body' => 'required',
-    ];
-}
     /**
      * Display a listing of the resource.
      */
@@ -27,28 +20,14 @@ public function rules(): array
         return view('coupons.index');
     }
 
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request): View
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
+        $validated = $request->validate([
+            'email' => 'required|email',
+        ]);
+        return view('coupons.store')->with('email', $validated['email']);
     }
 }
