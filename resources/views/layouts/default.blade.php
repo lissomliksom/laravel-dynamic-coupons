@@ -40,10 +40,11 @@
             </header>
 
             <main class="flex flex-col gap-4 max-w-2xl mx-auto rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.04)] ring-1 transition duration-300 ring-black/5 lg:p-10 lg:pb-10 ">
-                <form action="" method="post" class="flex items-end justify-between w-full gap-2">
+                <form method="POST" action="{{ route('coupons.store')}}" class="flex items-end justify-between w-full gap-2">
+                    @csrf
                     <label class="w-full space-y-1">
                         <span class="text-medium text-zinc-800">Fyll inn epostadresse:</span>
-                        <input type="email" class="flex-grow w-full h-10 px-3 py-2 text-base bg-white border rounded-lg shadow-sm appearance-none bg-yellowblock text-zinc-700 placeholder-zinc-400 border-zinc-200 border-b-zinc-300/80">
+                        <input type="email" id="email" name="email" class="flex-grow w-full h-10 px-3 py-2 text-base bg-white border rounded-lg shadow-sm appearance-none bg-yellowblock text-zinc-700 placeholder-zinc-400 border-zinc-200 border-b-zinc-300/80">
                     </label>
                     <button type="submit" class="px-3 py-2 text-white transition border rounded-lg shadow-sm bg-emerald-900 hover:bg-emerald-800 border-zinc-200 border-b-zinc-300/80 focus:bg-emerald-800">Abonner</button>
                 </form>
