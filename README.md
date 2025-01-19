@@ -3,10 +3,10 @@ A small demo project. Lookup an email-address, and display an appropriate coupon
 ## Installation
 
 Make sure you have php, composer and node setup on your computer.
-https://laravel.com/docs/11.x#installing-php
-https://nodejs.org/en/download
+[Laravel Docs: Installing PHP](https://laravel.com/docs/11.x#installing-php)
+[NodeJS: Download](https://nodejs.org/en/download)
 
-```
+```bash
 # clone repository
 git clone https://github.com/lissomliksom/laravel-dynamic-coupons.git
 
