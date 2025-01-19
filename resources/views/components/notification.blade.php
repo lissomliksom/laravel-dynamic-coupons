@@ -1,6 +1,6 @@
 @props([
     'message' => 'Hei',
-    'color' => 'white',
+    'color' => 'blue',
     'colors' => [
         'blue' => 'bg-blue-50 border-blue-900',
         'light' => 'bg-zinc-50 border-zinc-900',
