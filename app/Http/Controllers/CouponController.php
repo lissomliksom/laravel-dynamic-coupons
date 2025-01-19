@@ -66,7 +66,7 @@ class CouponController extends Controller
 
          // Check for active subscription.
          $hasActiveSubscription = $userSubscriptions->contains(function ($subscription) use ($currentDate) {
-            return $currentDate->between($subscription['subscription_start_date'], $subscription['subscription_end_date'] ?? now());
+            return $currentDate->between($subscription['subscription_start_date'], $subscription['subscription_end_date'] ?? $currentDate);
         });
 
         // Case: Active subscriber.
