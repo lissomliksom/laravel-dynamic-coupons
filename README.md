@@ -23,9 +23,6 @@ npm run build
 # install and build Composer-dependencies
 composer install
 
-# generate application key
-php artisan key:generate
-
 # run migrations (if applicable)
 php artisan migrate
 
